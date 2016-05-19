@@ -1,0 +1,29 @@
+{
+  "name": "meetup-randomizer",
+  "version": "1.0.0",
+  "description": "Aplicación de consola que en base a una URL de un evento de meetup elige un ganador",
+  "license": "MIT",
+  "preferGlobal": true,
+  "scripts": {
+    "lint": "standard --verbose | snazzy"
+  },
+  "bin": {
+    "meetup-randomizer": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/durancristhian/meetup-randomizer.git"
+  },
+  "author": "Cristhian Javier Duran <durancristhian@gmail.com> (https://github.com/durancristhian)",
+  "dependencies": {
+    "beautylog": "5.0.1",
+    "commander": "2.9.0",
+    "html-to-json": "0.6.0",
+    "image-to-ascii": "3.0.2",
+    "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "snazzy": "4.0.0",
+    "standard": "7.1.0"
+  }
+}
