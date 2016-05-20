@@ -1,6 +1,6 @@
 # meetup-randomizer
 
-Console application that chooses a winner from an URL of a Meetup's event.
+:four_leaf_clover: Console application that chooses a winner from an URL of a Meetup's event.
 
 ## Demo
 
