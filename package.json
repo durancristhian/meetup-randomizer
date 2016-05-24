@@ -1,6 +1,6 @@
 {
   "name": "meetup-randomizer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Console application that chooses a winner from an URL of a Meetup's event.",
   "license": "MIT",
   "preferGlobal": true,
