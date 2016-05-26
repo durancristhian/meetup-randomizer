@@ -19,10 +19,10 @@
   },
   "author": "Cristhian Javier Duran <durancristhian@gmail.com> (https://github.com/durancristhian)",
   "dependencies": {
-    "beautylog": "5.0.1",
+    "ansi": "0.3.1",
     "commander": "2.9.0",
-    "html-to-json": "0.6.0",
-    "image-to-ascii": "3.0.2",
+    "jimp": "0.2.24",
+    "request": "2.72.0",
     "unique-random-array": "1.0.0"
   },
   "devDependencies": {

@@ -1,141 +1,107 @@
 'use strict'
 
-const beautylog = require('beautylog')
-const htmlToJson = require('html-to-json')
-const imageToAscii = require('image-to-ascii')
+const ansi = require('ansi')
+const Jimp = require('jimp')
+const request = require('request')
 const uniqueRandomArray = require('unique-random-array')
 
-function fetchAudiencesData (url) {
+function chooseAWinner (confirmedMembersList) {
   return new Promise((resolve, reject) => {
-    beautylog.log('Looking for the list of participants')
+    const mixer = uniqueRandomArray(confirmedMembersList)
+    let winner = mixer()
 
-    htmlToJson.request(
-      url,
-      {
-        'rsvp-list': [
-          '#rsvp-list li',
-          $li => $li.find('a.unlink').attr('href')
-        ]
-      },
-      (error, result) => {
-        if (error) return reject(error.message)
-
-        resolve(result['rsvp-list'])
-      }
-    )
+    resolve(winner)
   })
 }
 
-function getWinnersData (winnerURL) {
+function excludeNonConfirmedMembers (membersList) {
   return new Promise((resolve, reject) => {
-    beautylog.log(`Getting winner's data`) // eslint-disable-line quotes
+    const confirmedMembersList = membersList.reduce((previous, current) => {
+      if (current.response === 'yes') {
+        let photoURL
 
-    htmlToJson.request(
-      winnerURL,
-      function ($doc) {
-        return {
-          'avatar': $doc.find('#member-profile-photo a').attr('href'),
-          'name': $doc.find('.docBox h1 .memName').text(),
-          'profileURL': winnerURL
+        if (current.member.photo && current.member.photo.highres_link) {
+          photoURL = current.member.photo.highres_link
         }
-      },
-      (error, result) => {
+
+        previous.push({
+          name: current.member.name,
+          photoURL,
+          profileURL: `http://www.meetup.com/${current.group.urlname}/members/${current.member.id}`
+        })
+      }
+
+      return previous
+    }, [])
+
+    resolve(confirmedMembersList)
+  })
+}
+
+function getData (meetupName, eventId, apiKey) {
+  return new Promise((resolve, reject) => {
+    request(
+      `https://api.meetup.com/${meetupName}/events/${eventId}/rsvps?key=${apiKey}&sign=true`,
+      (error, response, body) => {
         if (error) return reject(error.message)
 
-        resolve(result)
+        const parsedJSON = JSON.parse(body)
+        resolve(parsedJSON)
       }
     )
   })
 }
 
-function obtainWinnersURL (audience) {
+function showWinnerImage (winner) {
   return new Promise((resolve, reject) => {
-    beautylog.log('Choosing a winner')
+    if (winner.photoURL) {
+      Jimp.read(winner.photoURL, (error, image) => {
+        if (error) { return resolve(winner) }
 
-    const mixer = uniqueRandomArray(audience)
-    const winnerURL = mixer()
+        const cursor = ansi(process.stdout)
+        const resizedImage = image.resize(30, Jimp.AUTO)
+        const height = resizedImage.bitmap.height
+        const width = resizedImage.bitmap.width
 
-    resolve(winnerURL)
-  })
-}
+        console.log('')
+        console.log('')
 
-function processWinnersAvatar (winner) {
-  return new Promise((resolve, reject) => {
-    if (winner.avatar) {
-      beautylog.log(`Processing winner's avatar`) // eslint-disable-line quotes
-
-      imageToAscii(
-        winner.avatar,
-        {
-          bg: true,
-          size: { height: '75%' }
-        },
-        (error, converted) => {
-          if (error) {
-            console.log('')
-            beautylog.warn(error.message)
-          } else {
-            winner.avatar = converted
+        for (let y = 0; y < height; y++) {
+          for (let x = 0; x < width; x++) {
+            const color = `#${resizedImage.getPixelColor(x, y).toString(16).substr(0, 6)}`
+            cursor.hex(color).write('██')
           }
 
-          resolve(winner)
+          console.log('')
         }
-      )
+
+        cursor.fg.reset()
+
+        resolve(winner)
+      })
     } else {
-      console.log('')
-      beautylog.warn('The winner has no avatar ¬¬')
       resolve(winner)
     }
   })
 }
 
-function showLogo (url) {
+function showWinnerInformation (winner) {
   return new Promise((resolve, reject) => {
-    const logoPath = `${__dirname}/images/BANodeJS.jpeg`
+    console.log('')
+    console.log('')
+    console.log(winner.name.toUpperCase())
+    console.log(winner.profileURL)
+    console.log('')
+    console.log('')
 
-    imageToAscii(
-      logoPath,
-      {
-        bg: true,
-        size: { height: '25%' }
-      },
-      (error, converted) => {
-        if (error) return reject(error.message)
-
-        console.log('')
-        console.log(converted)
-        console.log('')
-        resolve(url)
-      }
-    )
+    resolve(winner)
   })
 }
 
-function showWinner (winner) {
-  return new Promise((resolve, reject) => {
-    console.log('')
-    beautylog.info('And the winner is...')
-    console.log('')
-
-    setTimeout(() => {
-      if (winner.avatar) {
-        console.log(winner.avatar)
-        console.log('')
-      }
-
-      beautylog.ok(winner.name.toUpperCase())
-      beautylog.ok(winner.profileURL)
-
-      resolve()
-    }, 1000)
-  })
-}
-
-module.exports = function execute (url) {
-  return showLogo(url)
-    .then(fetchAudiencesData)
-    .then(obtainWinnersURL)
-    .then(getWinnersData)
-    .then(processWinnersAvatar)
-    .then(showWinner)
+module.exports = function execute (meetupName, eventId, apiKey) {
+  return getData(meetupName, eventId, apiKey)
+    .then(excludeNonConfirmedMembers)
+    .then(chooseAWinner)
+    .then(showWinnerImage)
+    .then(showWinnerInformation)
 }

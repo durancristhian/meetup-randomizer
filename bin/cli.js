@@ -2,36 +2,32 @@
 
 'use strict'
 
-const beautylog = require('beautylog')
 const commander = require('commander')
-const execute = require('../program')
+const program = require('../program')
 const pkg = require('../package.json')
 
 commander
   .version(pkg.version)
-  .usage('--url URL')
-  .option('-u, --url [URL]', `specifies the URL of the meetup's event`) // eslint-disable-line quotes
+  .usage('--meetup-name [MEETUP_NAME] --event-id [EVENT_ID] --api-key [API_KEY]')
+  .option('--meetup-name [MEETUP_NAME]', `Meetup's name`) // eslint-disable-line quotes
+  .option('--event-id [EVENT_ID]', `Event's id`) // eslint-disable-line quotes
+  .option('--api-key [API_KEY]', 'Your api key')
   .parse(process.argv)
 
-if (!commander.url) {
+if (!commander.meetupName || !commander.eventId || !commander.apiKey) {
   console.log('')
-  beautylog.error('No URL has been given')
+  console.error('There is a missing parameter')
 
   commander.help()
 }
 
-execute(commander.url)
+program(commander.meetupName, commander.eventId, commander.apiKey)
   .then(() => {
-    console.log('')
-    beautylog.ok('Congratulations!')
-    beautylog.ok(';)')
-    console.log('')
-
     process.exit(0)
   })
   .catch(error => {
     console.log('')
-    beautylog.error(error)
+    console.error(error)
     console.log('')
 
     process.exit(1)
