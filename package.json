@@ -23,6 +23,7 @@
     "commander": "2.9.0",
     "jimp": "0.2.24",
     "request": "2.72.0",
+    "supports-color": "3.1.2",
     "unique-random-array": "1.0.0"
   },
   "devDependencies": {
