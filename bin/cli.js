@@ -3,7 +3,7 @@
 'use strict'
 
 const commander = require('commander')
-const program = require('../program')
+const program = require('../lib/program')
 const pkg = require('../package.json')
 
 commander
