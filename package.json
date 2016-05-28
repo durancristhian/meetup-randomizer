@@ -1,6 +1,6 @@
 {
   "name": "meetup-randomizer",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Console application that chooses a person from a Meetup's event.",
   "license": "MIT",
   "preferGlobal": true,
