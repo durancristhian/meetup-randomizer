@@ -2,9 +2,11 @@
 
 Console application that chooses a person from a Meetup's event
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
 ## Demo
 
-![meetup-randomizer](https://raw.githubusercontent.com/durancristhian/meetup-randomizer/master/images/demo.gif)
+![meetup-randomizer](https://raw.githubusercontent.com/durancristhian/meetup-randomizer/master/images/meetup-randomizer-demo.gif)
 
 ## Instalation
 

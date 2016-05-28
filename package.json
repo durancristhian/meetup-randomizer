@@ -29,5 +29,12 @@
   "devDependencies": {
     "snazzy": "4.0.0",
     "standard": "7.1.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/durancristhian/meetup-randomizer/issues"
+  },
+  "keywords": [
+    "meetup",
+    "random"
+  ]
 }
