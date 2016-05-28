@@ -1,6 +1,6 @@
 # meetup-randomizer
 
-:four_leaf_clover: Console application that chooses a winner from an URL of a Meetup's event.
+Console application that chooses a person from a Meetup's event
 
 ## Demo
 
@@ -8,19 +8,26 @@
 
 ## Instalation
 
-```
+```bash
 npm i -g meetup-randomizer
 ```
 
 ## Use
 
+```bash
+meetup-randomizer --meetup-name MEETUP_NAME --event-id EVENT_ID
 ```
-meetup-randomizer --url http://www.meetup.com/es-ES/banodejs/events/231097952/
-```
+
+## How it works
+
+1. Uses the Meetup API to get the list of RSVPs
+2. Excludes the non-confirmed attendees
+3. Chooses a random one
+4. Shows its profile in the console
 
 ## Contributing
 
-No restriction at all. Feel free to contribute with whatever you want.
+No restriction at all. Feel free to contribute with whatever you want
 
 ## License
 
