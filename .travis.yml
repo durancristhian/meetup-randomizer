@@ -9,8 +9,8 @@ before_install:
   - npm i -g npm@^2.0.0
 before_script:
   - npm prune
-  script:
-    - npm test
+script:
+  - npm test
 after_success:
   - npm run semantic-release
 branches:
