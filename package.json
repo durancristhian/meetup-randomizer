@@ -5,7 +5,9 @@
   "license": "MIT",
   "preferGlobal": true,
   "scripts": {
-    "lint": "standard --verbose | snazzy"
+    "commit": "git cz",
+    "lint": "standard",
+    "test": "npm run lint"
   },
   "engines": {
     "node": "6"
@@ -27,7 +29,8 @@
     "unique-random-array": "1.0.0"
   },
   "devDependencies": {
-    "snazzy": "4.0.0",
+    "commitizen": "2.8.1",
+    "cz-conventional-changelog": "1.1.6",
     "standard": "7.1.0"
   },
   "bugs": {
@@ -36,5 +39,10 @@
   "keywords": [
     "meetup",
     "random"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
