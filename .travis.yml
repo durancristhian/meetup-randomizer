@@ -9,10 +9,10 @@ before_install:
   - npm i -g npm@^2.0.0
 before_script:
   - npm prune
+  script:
+    - npm test
 after_success:
   - npm run semantic-release
-script:
-  - npm test
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/

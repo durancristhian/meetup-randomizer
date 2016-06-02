@@ -32,8 +32,9 @@
   "devDependencies": {
     "commitizen": "2.8.1",
     "cz-conventional-changelog": "1.1.6",
-    "standard": "7.1.0",
-    "semantic-release": "4.3.5"
+    "ghooks": "1.2.1",
+    "semantic-release": "4.3.5",
+    "standard": "7.1.0"
   },
   "bugs": {
     "url": "https://github.com/durancristhian/meetup-randomizer/issues"
@@ -45,6 +46,9 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm test"
     }
   }
 }
