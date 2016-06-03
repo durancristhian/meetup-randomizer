@@ -44,7 +44,7 @@ No restriction at all. Feel free to contribute with whatever you want
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars.githubusercontent.com/u/4248944?v=3" width="100px;"/><br /><sub>Cristhian Duran</sub>](https://github.com/durancristhian)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian) | [<img src="https://avatars.githubusercontent.com/u/2440935?v=3" width="100px;"/><br /><sub>Alejandro Oviedo</sub>](https://twitter.com/a0viedo)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo) [📖](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo) |
+| [<img src="https://avatars.githubusercontent.com/u/4248944?v=3" width="100px;"/><br /><sub>Cristhian Duran</sub>](https://github.com/durancristhian)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian) [📖](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian) | [<img src="https://avatars.githubusercontent.com/u/2440935?v=3" width="100px;"/><br /><sub>Alejandro Oviedo</sub>](https://twitter.com/a0viedo)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo) [📖](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo) |
 | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

@@ -5,6 +5,8 @@
   "license": "MIT",
   "preferGlobal": true,
   "scripts": {
+    "contributors-add": "all-contributors add",
+    "contributors-generate": "all-contributors generate",
     "commit": "git cz",
     "lint": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
