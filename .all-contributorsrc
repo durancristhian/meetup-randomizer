@@ -1,0 +1,20 @@
+{
+  "projectName": "meetup-randomizer",
+  "projectOwner": "durancristhian",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "durancristhian",
+      "name": "Cristhian Duran",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4248944?v=3",
+      "profile": "https://github.com/durancristhian",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}

@@ -8,6 +8,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/durancristhian/meetup-randomizer/blob/master/LICENSE)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 Console application that chooses a random person from a Meetup's event
 
@@ -41,3 +42,14 @@ No restriction at all. Feel free to contribute with whatever you want
 ## License
 
 MIT
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars.githubusercontent.com/u/4248944?v=3" width="100px;"/><br /><sub>Cristhian Duran</sub>](https://github.com/durancristhian)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian) |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
