@@ -1,6 +1,6 @@
 # meetup-randomizer
 
-[![npm version](https://badge.fury.io/js/meetup-randomizer.svg)](https://badge.fury.io/js/meetup-randomizer)
+[![npm version](https://img.shields.io/npm/v/meetup-randomizer.svg)](https://www.npmjs.com/package/meetup-randomizer)
 [![Travis branch](https://img.shields.io/travis/durancristhian/meetup-randomizer/master.svg?maxAge=2592000)](https://travis-ci.org/durancristhian/meetup-randomizer)
 [![node](https://img.shields.io/node/v/meetup-randomizer.svg?maxAge=2592000)](https://www.npmjs.com/package/meetup-randomizer)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?maxAge=2592000)](http://makeapullrequest.com)
