@@ -21,5 +21,5 @@ program(commander.meetupName, commander.eventId)
   })
   .catch(error => {
     console.error(error)
-    process.exit(error)
+    process.exit(1)
   })
