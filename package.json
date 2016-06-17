@@ -29,7 +29,6 @@
     "ansi": "^0.3.1",
     "commander": "^2.9.0",
     "jimp": "^0.2.24",
-    "request": "^2.72.0",
     "unique-random-array": "^1.0.0"
   },
   "devDependencies": {
