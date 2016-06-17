@@ -26,20 +26,20 @@
   },
   "author": "Cristhian Javier Duran <durancristhian@gmail.com> (https://github.com/durancristhian)",
   "dependencies": {
-    "ansi": "0.3.1",
-    "commander": "2.9.0",
-    "jimp": "0.2.24",
-    "request": "2.72.0",
-    "supports-color": "3.1.2",
-    "unique-random-array": "1.0.0"
+    "ansi": "^0.3.1",
+    "commander": "^2.9.0",
+    "jimp": "^0.2.24",
+    "request": "^2.72.0",
+    "supports-color": "^3.1.2",
+    "unique-random-array": "^1.0.0"
   },
   "devDependencies": {
-    "commitizen": "2.8.1",
-    "cz-conventional-changelog": "1.1.6",
-    "ghooks": "1.2.1",
+    "commitizen": "^2.8.1",
+    "cz-conventional-changelog": "^1.1.6",
+    "ghooks": "^1.2.1",
     "publish-please": "^2.1.4",
-    "semantic-release": "4.3.5",
-    "standard": "7.1.0"
+    "semantic-release": "^4.3.5",
+    "standard": "^7.1.0"
   },
   "bugs": {
     "url": "https://github.com/durancristhian/meetup-randomizer/issues"
