@@ -10,7 +10,9 @@
     "commit": "git cz",
     "lint": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "publish-please": "publish-please",
+    "prepublish": "publish-please guard"
   },
   "engines": {
     "node": "6"
@@ -35,6 +37,7 @@
     "commitizen": "2.8.1",
     "cz-conventional-changelog": "1.1.6",
     "ghooks": "1.2.1",
+    "publish-please": "^2.1.4",
     "semantic-release": "4.3.5",
     "standard": "7.1.0"
   },
