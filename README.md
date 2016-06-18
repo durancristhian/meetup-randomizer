@@ -35,9 +35,9 @@ meetup-randomizer --meetup-name 'banodejs' --event-id '231888421'
 * As any other **npm module**:
 
 ```javascript
-const getResults = require('meetup-randomizer')
+const program = require('meetup-randomizer')
 
-getResults('banodejs', '231888421')
+program('banodejs', '231888421')
   .then(winner => { console.log(winner) })
   .catch(error => { console.error(error) })
 ```

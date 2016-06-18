@@ -1,11 +1,9 @@
 #! /usr/bin/env node
 
-'use strict'
-
 const commander = require('commander')
-const getResults = require('../lib/get-results')
+const program = require('../lib/program')
 const pkg = require('../package.json')
-const showWinnerImage = require('../lib/show-winner-image')
+const showWinnerImage = require('../lib/modules/show-winner-image')
 
 commander
   .version(pkg.version)
@@ -18,7 +16,7 @@ if (!commander.meetupName || !commander.eventId) {
   commander.help()
 }
 
-getResults(commander.meetupName, commander.eventId)
+program(commander.meetupName, commander.eventId)
   .then(winner => {
     showWinnerImage(winner)
       .catch(error => {

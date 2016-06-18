@@ -4,7 +4,7 @@
   "version": "2.0.1-semantically-released",
   "license": "MIT",
   "preferGlobal": true,
-  "main": "lib/get-results.js",
+  "main": "lib/program.js",
   "scripts": {
     "contributors-add": "all-contributors add",
     "contributors-generate": "all-contributors generate",
@@ -12,6 +12,9 @@
     "lint": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "npm run lint"
+  },
+  "browser": {
+    "./lib/modules/get-event-data.js": "./lib/shim/modules/get-event-data.js"
   },
   "engines": {
     "node": "6"
@@ -28,6 +31,7 @@
     "ansi": "^0.3.1",
     "commander": "^2.9.0",
     "jimp": "^0.2.24",
+    "jquery": "^3.0.0",
     "unique-random-array": "^1.0.0"
   },
   "devDependencies": {
