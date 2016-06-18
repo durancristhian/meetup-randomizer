@@ -6,12 +6,13 @@
   "preferGlobal": true,
   "main": "lib/program.js",
   "scripts": {
+    "check-vulnerable-dependencies": "nsp check",
     "contributors-add": "all-contributors add",
     "contributors-generate": "all-contributors generate",
     "commit": "git cz",
     "lint": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "npm run lint"
+    "test": "npm run check-vulnerable-dependencies && npm run lint"
   },
   "browser": {
     "./lib/modules/get-event-data.js": "./lib/shim/modules/get-event-data.js"
@@ -38,6 +39,7 @@
     "commitizen": "^2.8.1",
     "cz-conventional-changelog": "^1.1.6",
     "ghooks": "^1.2.1",
+    "nsp": "^2.4.0",
     "semantic-release": "^4.3.5",
     "standard": "^7.1.0"
   },
