@@ -12,7 +12,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg)](#contributors)
 [![license](https://img.shields.io/github/license/durancristhian/meetup-randomizer.svg)](https://github.com/durancristhian/meetup-randomizer/blob/master/LICENSE)
 
-Library that chooses a random person from a Meetup's event. It can be executed as any other npm module, as a CLI and bundle it for client-side apps.
+Library that chooses a random person from a Meetup's event. It can be executed as a CLI or as any other npm module (including client-side implementations).
 
 ## Demo
 
@@ -32,7 +32,7 @@ npm i meetup-randomizer
 meetup-randomizer --meetup-name 'banodejs' --event-id '231888421'
 ```
 
-* As any other **npm module**:
+* As any other **npm module** (including *client-side* implementations):
 
 ```javascript
 const program = require('meetup-randomizer')
