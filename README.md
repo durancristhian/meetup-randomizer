@@ -45,8 +45,9 @@ program('banodejs', '231888421')
 ## How it works
 
 1. It uses the [Meetup API](http://www.meetup.com/meetup_api/) to get the list of RSVPs.
-2. It excludes the non-confirmed attendees.
-3. It returns a random one.
+2. It excludes the hosts members.
+3. It excludes the non-confirmed attendees.
+4. It returns a random one.
 
 In the case of the **CLI**, it shows the winner's picture into the console.
 
