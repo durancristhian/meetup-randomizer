@@ -9,7 +9,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?maxAge=2592000)](http://makeapullrequest.com)
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 [![license](https://img.shields.io/github/license/durancristhian/meetup-randomizer.svg)](https://github.com/durancristhian/meetup-randomizer/blob/master/LICENSE)
 
 Library that chooses a random person from a Meetup's event. It can be executed as any other npm module, as a CLI and bundle it for client-side apps.
@@ -29,7 +29,7 @@ npm i meetup-randomizer
 * As a **CLI**:
 
 ```bash
-meetup-randomizer --meetup-name MEETUP_NAME --event-id EVENT_ID
+meetup-randomizer --meetup-name 'banodejs' --event-id '231888421'
 ```
 
 * As any other **npm module**:
@@ -50,20 +50,14 @@ getResults('banodejs', '231888421')
 
 In the case of the **CLI**, it shows the winner's picture into the console.
 
-## Contributing
-
-No restriction at all. Feel free to contribute with whatever you want.
-
 ## Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 | [<img src="https://avatars.githubusercontent.com/u/4248944?v=3" width="100px;"/><br /><sub>Cristhian Duran</sub>](https://github.com/durancristhian)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian) [📖](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian) | [<img src="https://avatars.githubusercontent.com/u/2440935?v=3" width="100px;"/><br /><sub>Alejandro Oviedo</sub>](https://twitter.com/a0viedo)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo) [📖](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo) |
 | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!.
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification.
 
 ## License
 
