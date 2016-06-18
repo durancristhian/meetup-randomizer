@@ -4,6 +4,7 @@
   "version": "2.0.1-semantically-released",
   "license": "MIT",
   "preferGlobal": true,
+  "main": "lib/get-results.js",
   "scripts": {
     "contributors-add": "all-contributors add",
     "contributors-generate": "all-contributors generate",
