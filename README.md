@@ -10,7 +10,7 @@
 [![license](https://img.shields.io/github/license/durancristhian/meetup-randomizer.svg)](https://github.com/durancristhian/meetup-randomizer/blob/master/LICENSE)
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg)](#contributors)
 
-Console application that chooses a random person from a Meetup's event
+Library that chooses a random person from a Meetup's event. It can be executed as any other npm module, as a CLI and bundle it for client-side apps.
 
 ## Demo
 
@@ -19,25 +19,38 @@ Console application that chooses a random person from a Meetup's event
 ## Instalation
 
 ```bash
-npm i -g meetup-randomizer
+npm i meetup-randomizer
 ```
 
 ## Use
+
+* As a **CLI**:
 
 ```bash
 meetup-randomizer --meetup-name MEETUP_NAME --event-id EVENT_ID
 ```
 
+* As any other **npm module**:
+
+```javascript
+const getResults = require('meetup-randomizer')
+
+getResults('banodejs', '231888421')
+  .then(winner => { console.log(winner) })
+  .catch(error => { console.error(error) })
+```
+
 ## How it works
 
-1. Uses the Meetup API to get the list of RSVPs
-2. Excludes the non-confirmed attendees
-3. Chooses a random one
-4. Shows its profile in the console
+1. It uses the [Meetup API](http://www.meetup.com/meetup_api/) to get the list of RSVPs.
+2. It excludes the non-confirmed attendees.
+3. It returns a random one.
+
+In the case of the **CLI**, it shows the winner's picture into the console.
 
 ## Contributing
 
-No restriction at all. Feel free to contribute with whatever you want
+No restriction at all. Feel free to contribute with whatever you want.
 
 ## Contributors
 
@@ -48,7 +61,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!.
 
 ## License
 
