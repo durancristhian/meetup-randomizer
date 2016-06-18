@@ -12,7 +12,7 @@
     "commit": "git cz",
     "lint": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "npm run check-vulnerable-dependencies && npm run lint"
+    "test": "npm run lint"
   },
   "browser": {
     "./lib/modules/get-event-data.js": "./lib/shim/modules/get-event-data.js"
