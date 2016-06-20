@@ -10,6 +10,7 @@ before_install:
 before_script:
   - npm prune
 script:
+  - npm run check-vulnerable-dependencies
   - npm test
 after_success:
   - npm run semantic-release
