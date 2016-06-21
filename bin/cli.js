@@ -4,6 +4,8 @@ const commander = require('commander')
 const program = require('../lib/program')
 const pkg = require('../package.json')
 const showWinnerImage = require('../lib/modules/show-winner-image')
+const API_URL = process.env.API_URL
+const PROFILE_URL = process.env.PROFILE_URL
 
 commander
   .version(pkg.version)
@@ -16,7 +18,7 @@ if (!commander.meetupName || !commander.eventId) {
   commander.help()
 }
 
-program(commander.meetupName, commander.eventId)
+program(API_URL, PROFILE_URL, commander.meetupName, commander.eventId)
   .then(winner => {
     showWinnerImage(winner)
       .catch(error => {
