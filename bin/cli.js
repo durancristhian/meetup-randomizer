@@ -2,13 +2,11 @@
 
 const commander = require('commander')
 const program = require('../lib/program')
-const pkg = require('../package.json')
 const showWinnerImage = require('../lib/modules/show-winner-image')
 const API_URL = process.env.API_URL
 const PROFILE_URL = process.env.PROFILE_URL
 
 commander
-  .version(pkg.version)
   .usage('--meetup-name [MEETUP_NAME] --event-id [EVENT_ID]')
   .option('-m, --meetup-name <MEETUP_NAME>', `meetup's name. For example: banodejs`) // eslint-disable-line quotes
   .option('-e, --event-id <EVENT_ID>', `event's id. For example: 231888421`) // eslint-disable-line quotes
