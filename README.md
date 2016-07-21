@@ -30,7 +30,10 @@ npm i meetup-randomizer
 * As a **CLI**:
 
 ```bash
+# 1
 meetup-randomizer --meetup-name 'banodejs' --event-id '231888421'
+# 2
+meetup-randomizer --url www.meetup.com/banodejs/events/231097952/
 ```
 
 * As any other **npm module** (including *client-side* implementations):
