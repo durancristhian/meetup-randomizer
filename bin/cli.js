@@ -11,7 +11,7 @@ commander
   .usage('--url [EVENT_URL] --meetup-name [MEETUP_NAME] --event-id [EVENT_ID]')
   .option('-m, --meetup-name <MEETUP_NAME>', `meetup's name. For example: banodejs`) // eslint-disable-line quotes
   .option('-e, --event-id <EVENT_ID>', `event's id. For example: 231888421`) // eslint-disable-line quotes
-  .option('-u, --url <EVENT_URL>', `event's url. For example: www.meetup.com/es-ES/banodejs/events/231097952`) // eslint-disable-line quotes
+  .option('-u, --url <EVENT_URL>', `event's url. For example: www.meetup.com/es-ES/banodejs/events/231097952/`) // eslint-disable-line quotes
   .parse(process.argv)
 
 if (!commander.url && (!commander.meetupName || !commander.eventId)) {
