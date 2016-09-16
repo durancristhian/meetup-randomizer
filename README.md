@@ -13,7 +13,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg)](#contributors)
 [![license](https://img.shields.io/github/license/durancristhian/meetup-randomizer.svg)](https://github.com/durancristhian/meetup-randomizer/blob/master/LICENSE)
 
-Library that chooses a random person from a Meetup's event. It can be executed as a CLI or as any other npm module (including client-side implementations).
+:twisted_rightwards_arrows: Library that chooses a random person from a Meetup's event. It can be executed as a CLI or as any other npm module (including client-side implementations).
 
 ## Demo
 
