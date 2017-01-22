@@ -38,10 +38,10 @@
   "devDependencies": {
     "commitizen": "^2.8.1",
     "cz-conventional-changelog": "^1.1.6",
-    "ghooks": "^1.2.1",
+    "ghooks": "^2.0.0",
     "nsp": "^2.4.0",
-    "semantic-release": "^4.3.5",
-    "standard": "^7.1.0"
+    "semantic-release": "^6.3.2",
+    "standard": "^8.6.0"
   },
   "bugs": {
     "url": "https://github.com/durancristhian/meetup-randomizer/issues"
