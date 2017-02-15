@@ -38,7 +38,7 @@
   "devDependencies": {
     "commitizen": "^2.8.1",
     "cz-conventional-changelog": "^1.1.6",
-    "ghooks": "^2.0.0",
+    "husky": "^0.13.1",
     "nsp": "^2.4.0",
     "semantic-release": "^6.3.2",
     "standard": "^8.6.0"
