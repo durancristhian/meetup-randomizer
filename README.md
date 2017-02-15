@@ -1,7 +1,5 @@
 # meetup-randomizer
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/durancristhian/meetup-randomizer.svg)](https://greenkeeper.io/)
-
 [![npm version](https://img.shields.io/npm/v/meetup-randomizer.svg)](https://www.npmjs.com/package/meetup-randomizer)
 [![Travis branch](https://img.shields.io/travis/durancristhian/meetup-randomizer/master.svg?maxAge=2592000)](https://travis-ci.org/durancristhian/meetup-randomizer)
 [![Dependency Status](https://dependencyci.com/github/durancristhian/meetup-randomizer/badge)](https://dependencyci.com/github/durancristhian/meetup-randomizer)
@@ -11,6 +9,7 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?maxAge=2592000)](http://standardjs.com/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/durancristhian/meetup-randomizer.svg)](https://greenkeeper.io/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?maxAge=2592000)](http://makeapullrequest.com)
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg)](#contributors)
 [![license](https://img.shields.io/github/license/durancristhian/meetup-randomizer.svg)](https://github.com/durancristhian/meetup-randomizer/blob/master/LICENSE)
