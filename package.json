@@ -18,7 +18,7 @@
     "./lib/modules/get-event-data.js": "./lib/shim/modules/get-event-data.js"
   },
   "engines": {
-    "node": "6"
+    "node": ">= 6"
   },
   "bin": {
     "meetup-randomizer": "./bin/cli.js"
