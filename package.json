@@ -37,11 +37,11 @@
   },
   "devDependencies": {
     "commitizen": "^2.8.1",
-    "cz-conventional-changelog": "^1.1.6",
+    "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.13.1",
     "nsp": "^2.4.0",
     "semantic-release": "^6.3.2",
-    "standard": "^9.0.0"
+    "standard": "^9.0.1"
   },
   "bugs": {
     "url": "https://github.com/durancristhian/meetup-randomizer/issues"
