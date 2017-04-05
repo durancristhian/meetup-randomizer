@@ -41,7 +41,7 @@
     "husky": "^0.13.1",
     "nsp": "^2.4.0",
     "semantic-release": "^6.3.2",
-    "standard": "^9.0.1"
+    "standard": "^10.0.0"
   },
   "bugs": {
     "url": "https://github.com/durancristhian/meetup-randomizer/issues"
