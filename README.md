@@ -11,7 +11,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/durancristhian/meetup-randomizer.svg)](https://greenkeeper.io/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?maxAge=2592000)](http://makeapullrequest.com)
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 [![license](https://img.shields.io/github/license/durancristhian/meetup-randomizer.svg)](https://github.com/durancristhian/meetup-randomizer/blob/master/LICENSE)
 
 :twisted_rightwards_arrows: Library that chooses a random person from a Meetup's event. It can be executed as a CLI or as any other npm module (including client-side implementations).
@@ -59,8 +59,8 @@ In the case of the **CLI**, it shows the winner's picture into the console.
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars.githubusercontent.com/u/4248944?v=3" width="100px;"/><br /><sub>Cristhian Duran</sub>](https://github.com/durancristhian)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian) [📖](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian) | [<img src="https://avatars.githubusercontent.com/u/2440935?v=3" width="100px;"/><br /><sub>Alejandro Oviedo</sub>](https://twitter.com/a0viedo)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo) [📖](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo) |
-| :---: | :---: |
+| [<img src="https://avatars.githubusercontent.com/u/4248944?v=3" width="100px;"/><br /><sub>Cristhian Duran</sub>](https://github.com/durancristhian)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian "Code") [📖](https://github.com/durancristhian/meetup-randomizer/commits?author=durancristhian "Documentation") | [<img src="https://avatars.githubusercontent.com/u/2440935?v=3" width="100px;"/><br /><sub>Alejandro Oviedo</sub>](https://github.com/a0viedo)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo "Code") [📖](https://github.com/durancristhian/meetup-randomizer/commits?author=a0viedo "Documentation") | [<img src="https://avatars.githubusercontent.com/u/1288694?v=3" width="100px;"/><br /><sub>Justin Hall</sub>](https://github.com/wKovacs64)<br />[💻](https://github.com/durancristhian/meetup-randomizer/commits?author=wKovacs64 "Code") |
+| :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification.

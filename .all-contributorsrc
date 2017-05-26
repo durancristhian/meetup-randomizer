@@ -21,10 +21,19 @@
       "login": "a0viedo",
       "name": "Alejandro Oviedo",
       "avatar_url": "https://avatars.githubusercontent.com/u/2440935?v=3",
-      "profile": "https://twitter.com/a0viedo",
+      "profile": "https://github.com/a0viedo",
       "contributions": [
         "code",
         "doc"
+      ]
+    },
+    {
+      "login": "wKovacs64",
+      "name": "Justin Hall",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1288694?v=3",
+      "profile": "https://github.com/wKovacs64",
+      "contributions": [
+        "code"
       ]
     }
   ]
