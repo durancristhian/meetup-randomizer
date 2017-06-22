@@ -38,7 +38,7 @@
     "all-contributors-cli": "^4.3.0",
     "commitizen": "^2.8.1",
     "cz-conventional-changelog": "^2.0.0",
-    "husky": "^0.13.1",
+    "husky": "^0.14.0",
     "nsp": "^2.4.0",
     "semantic-release": "^6.3.2",
     "standard": "^10.0.0"
