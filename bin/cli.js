@@ -26,20 +26,20 @@ if (commander.url) {
 }
 
 if (!commander.winnersAmount) {
-  commander.winnersAmount = 1;
+  commander.winnersAmount = 1
 }
 
 commander.winnersAmount = parseInt(commander.winnersAmount)
 
 if (process.env.API_URL) {
-  meetupRandomizer.setCustomAPI_URL(process.env.API_URL)
+  meetupRandomizer.setCustomApiUrl(process.env.API_URL)
 }
 
 if (process.env.PROFILE_URL) {
-  meetupRandomizer.setCustomPROFILE_URL(process.env.PROFILE_URL)
+  meetupRandomizer.setCustomProfileUrl(process.env.PROFILE_URL)
 }
 
-console.log(`Eligiendo ${commander.winnersAmount === 1 ? 'ganador' : 'ganadores' }...`)
+console.log(`Eligiendo ${commander.winnersAmount === 1 ? 'ganador' : 'ganadores'}...`)
 
 meetupRandomizer.run(commander.meetupName, commander.eventId, commander.winnersAmount)
   .then(winners => {
