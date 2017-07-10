@@ -1,10 +1,10 @@
 {
   "name": "meetup-randomizer",
-  "description": "Console application that chooses a random person from a Meetup's event.",
+  "description": "Console application that chooses random persons from a Meetup's event.",
   "version": "2.0.1-semantically-released",
   "license": "MIT",
   "preferGlobal": true,
-  "main": "lib/program.js",
+  "main": "lib/meetup-randomizer.js",
   "scripts": {
     "check-vulnerable-dependencies": "nsp check",
     "contributors-generate": "all-contributors generate",
@@ -32,7 +32,7 @@
     "commander": "^2.9.0",
     "jimp": "^0.2.24",
     "jquery": "^3.0.0",
-    "unique-random-array": "^1.0.0"
+    "unique-random-range": "^1.0.3"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.3.0",

@@ -1,17 +1,16 @@
 #! /usr/bin/env node
 
 const commander = require('commander')
-const program = require('../lib/program')
+const meetupRandomizer = require('../lib/meetup-randomizer')
 const showWinnerImage = require('../lib/modules/show-winner-image')
-const API_URL = process.env.API_URL
-const PROFILE_URL = process.env.PROFILE_URL
 const url = require('url')
 
 commander
   .usage('--url [EVENT_URL] --meetup-name [MEETUP_NAME] --event-id [EVENT_ID]')
-  .option('-m, --meetup-name <MEETUP_NAME>', `meetup's name. For example: banodejs`) // eslint-disable-line quotes
-  .option('-e, --event-id <EVENT_ID>', `event's id. For example: 231888421`) // eslint-disable-line quotes
-  .option('-u, --url <EVENT_URL>', `event's url. For example: www.meetup.com/es-ES/banodejs/events/231097952/`) // eslint-disable-line quotes
+  .option('-m, --meetup-name <MEETUP_NAME>', `meetup's name. For example: banodejs`)
+  .option('-e, --event-id <EVENT_ID>', `event's id. For example: 231888421`)
+  .option('-u, --url <EVENT_URL>', `event's url. For example: www.meetup.com/es-ES/banodejs/events/231097952/`)
+  .option('-w, --winners-amount <AMOUNT>', `[OPTIONAL] number of times the command run in order to get multiple winners. For example: 5`)
   .parse(process.argv)
 
 if (!commander.url && (!commander.meetupName || !commander.eventId)) {
@@ -21,18 +20,37 @@ if (!commander.url && (!commander.meetupName || !commander.eventId)) {
 if (commander.url) {
   const path = url.parse(commander.url).path
   const pathSlices = path.split('/')
+
   commander.eventId = pathSlices[pathSlices.length - 2]
   commander.meetupName = pathSlices[pathSlices.length - 4]
 }
 
-program(API_URL, PROFILE_URL, commander.meetupName, commander.eventId)
-  .then(winner => {
-    showWinnerImage(winner)
-      .catch(error => {
-        console.log(`There was an error when we tried to show the winner's image`) // eslint-disable-line quotes
-        console.log(`Error description: ${error.message}`) // eslint-disable-line quotes
-      })
-      .then(winner => console.log(JSON.stringify(winner, null, 2)))
+if (!commander.winnersAmount) {
+  commander.winnersAmount = 1;
+}
+
+commander.winnersAmount = parseInt(commander.winnersAmount)
+
+if (process.env.API_URL) {
+  meetupRandomizer.setCustomAPI_URL(process.env.API_URL)
+}
+
+if (process.env.PROFILE_URL) {
+  meetupRandomizer.setCustomPROFILE_URL(process.env.PROFILE_URL)
+}
+
+console.log(`Eligiendo ${commander.winnersAmount === 1 ? 'ganador' : 'ganadores' }...`)
+
+meetupRandomizer.run(commander.meetupName, commander.eventId, commander.winnersAmount)
+  .then(winners => {
+    winners.forEach(winner => {
+      showWinnerImage(winner)
+        .catch(error => {
+          console.log(`There was an error when we tried to show the winner's image`)
+          console.log(error.message)
+        })
+        .then(winner => console.log(JSON.stringify(winner, null, 2)))
+    })
   })
   .catch(error => {
     console.error(error)

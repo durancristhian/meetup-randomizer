@@ -14,7 +14,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 [![license](https://img.shields.io/github/license/durancristhian/meetup-randomizer.svg)](https://github.com/durancristhian/meetup-randomizer/blob/master/LICENSE)
 
-:twisted_rightwards_arrows: Library that chooses a random person from a Meetup's event. It can be executed as a CLI or as any other npm module (including client-side implementations).
+:twisted_rightwards_arrows: Library that chooses random persons from a Meetup's event. It can be executed as a CLI or as any other npm module (including client-side implementations).
 
 ## Demo
 
@@ -32,27 +32,27 @@ npm i meetup-randomizer
 
 ```bash
 # 1
-meetup-randomizer --meetup-name 'banodejs' --event-id '231888421'
+meetup-randomizer --meetup-name 'banodejs' --event-id '231888421' --winners-amount 2
 # 2
-meetup-randomizer --url 'www.meetup.com/banodejs/events/231097952/'
+meetup-randomizer --url 'www.meetup.com/banodejs/events/231097952/' --winners-amount 2
 ```
 
 * As any other **npm module** (including *client-side* implementations):
 
 ```javascript
-const program = require('meetup-randomizer')
+const meetupRandomizer = require('meetup-randomizer')
 
-program('banodejs', '231888421')
-  .then(winner => { console.log(winner) })
-  .catch(error => { console.error(error) })
+meetupRandomizer('banodejs', '231888421', 2)
+  .then(winners => console.log)
+  .catch(error => console.error)
 ```
 
 ## How it works
 
 1. It uses the [Meetup API](http://www.meetup.com/meetup_api/) to get the list of RSVPs.
-2. It excludes the hosts members.
-3. It excludes the non-confirmed attendees.
-4. It returns a random one.
+1. It excludes the hosts members.
+1. It excludes the non-confirmed attendees.
+1. It returns an array of random winners.
 
 In the case of the **CLI**, it shows the winner's picture into the console.
 
