@@ -39,7 +39,7 @@
     "commitizen": "^2.8.1",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.0",
-    "nsp": "^2.4.0",
+    "nsp": "^3.0.0",
     "semantic-release": "^7.0.1",
     "standard": "^10.0.0"
   },
