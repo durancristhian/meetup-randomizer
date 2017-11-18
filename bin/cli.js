@@ -49,7 +49,7 @@ meetupRandomizer.run(commander.meetupName, commander.eventId, commander.winnersA
           console.log(`There was an error when we tried to show the winner's image`)
           console.log(error.message)
         })
-        .then(winner => console.log(JSON.stringify(winner, null, 2)))
+        .then(() => console.log(JSON.stringify(winner, null, 2)))
     })
   })
   .catch(error => {

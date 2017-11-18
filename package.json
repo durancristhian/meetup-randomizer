@@ -10,7 +10,7 @@
     "contributors-generate": "all-contributors generate",
     "commit": "git cz",
     "lint": "standard",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release --branch master",
     "test": "npm run lint"
   },
   "browser": {
@@ -29,19 +29,19 @@
   "author": "Cristhian Javier Duran <durancristhian@gmail.com> (https://github.com/durancristhian)",
   "dependencies": {
     "ansi": "^0.3.1",
-    "commander": "^2.9.0",
-    "jimp": "^0.2.24",
-    "jquery": "^3.0.0",
-    "unique-random-range": "^1.0.3"
+    "commander": "^2.11.0",
+    "jimp": "^0.2.28",
+    "jquery": "^3.2.1",
+    "knuth-shuffle": "^1.0.8"
   },
   "devDependencies": {
-    "all-contributors-cli": "^4.3.0",
-    "commitizen": "^2.8.1",
-    "cz-conventional-changelog": "^2.0.0",
+    "all-contributors-cli": "^4.8.1",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.0",
-    "nsp": "^2.4.0",
-    "semantic-release": "^7.0.1",
-    "standard": "^10.0.0"
+    "nsp": "^3.1.0",
+    "semantic-release": "^8.2.0",
+    "standard": "^10.0.3"
   },
   "bugs": {
     "url": "https://github.com/durancristhian/meetup-randomizer/issues"
