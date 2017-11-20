@@ -10,7 +10,7 @@
     "contributors-generate": "all-contributors generate",
     "commit": "git cz",
     "lint": "standard --fix",
-    "semantic-release": "semantic-release --branch master",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "npm run lint"
   },
   "browser": {
