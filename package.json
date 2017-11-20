@@ -9,7 +9,7 @@
     "check-vulnerable-dependencies": "nsp check",
     "contributors-generate": "all-contributors generate",
     "commit": "git cz",
-    "lint": "standard",
+    "lint": "standard --fix",
     "semantic-release": "semantic-release --branch master",
     "test": "npm run lint"
   },
