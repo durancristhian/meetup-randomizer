@@ -35,7 +35,7 @@
     "knuth-shuffle": "^1.0.8"
   },
   "devDependencies": {
-    "all-contributors-cli": "^4.8.1",
+    "all-contributors-cli": "^5.0.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.0",
