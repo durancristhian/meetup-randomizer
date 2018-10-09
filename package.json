@@ -1,7 +1,7 @@
 {
   "name": "meetup-randomizer",
   "description": "Console application that chooses random persons from a Meetup's event.",
-  "version": "2.0.1-semantically-released",
+  "version": "0.0.0-development",
   "license": "MIT",
   "preferGlobal": true,
   "main": "lib/meetup-randomizer.js",
@@ -10,8 +10,9 @@
     "contributors-generate": "all-contributors generate",
     "commit": "git cz",
     "lint": "standard --fix",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "browser": {
     "./lib/modules/get-event-data.js": "./lib/shim/modules/get-event-data.js"
@@ -41,7 +42,8 @@
     "husky": "^1.1.1",
     "nsp": "^3.2.1",
     "semantic-release": "^15.9.17",
-    "standard": "^12.0.1"
+    "standard": "^12.0.1",
+    "travis-deploy-once": "^5.0.9"
   },
   "bugs": {
     "url": "https://github.com/durancristhian/meetup-randomizer/issues"
